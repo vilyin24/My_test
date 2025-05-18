@@ -15,7 +15,7 @@ def get_programs(biztalk_id):
     return response
 
 @allure.feature("Получение баннеров GET banners")
-@allure.title("Получения информации о баннерах")
+@allure.title("Информация о баннерах")
 @allure.description("GET banners запрос возвращающий информацию по баннерам")
 @pytest.mark.parametrize("biztalk_id, expected_success, expected_status", [
     (VALID_BIZTALK_ID, True, StatusCode.OK.value),

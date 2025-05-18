@@ -8,16 +8,15 @@ from config.config import  Config
 from enums.enum import StatusCode
 from data.data_test import *
 
-@allure.step("GET banners")
+@allure.step("GET statuses_v2")
 def get_programs(biztalk_id):
-    url = f"{Config.BASE_URL_BANNERS}/{biztalk_id}/plain"
+    url = f"{Config.BASE_URL_BROKER}/{biztalk_id}/statuses/v2"
     response = requests.get(url, verify=False)
     return response
 
-#нужно еще для КК тоже самое
-@allure.feature("GET banners{}/plain")
-@allure.title("Получения информации о баннерах")
-@allure.description("GET banners запрос возвращающий информацию по баннерам")
+@allure.feature("GET statuses_v2")
+@allure.title("Информация о баннерах")
+@allure.description("GET statuses_v2")
 @pytest.mark.parametrize("biztalk_id, expected_success, expected_status", [
     (VALID_BIZTALK_ID, True, StatusCode.OK.value),
     (VALID_BIZTALK_ID_BANNERS, True, StatusCode.OK.value),

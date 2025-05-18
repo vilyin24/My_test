@@ -18,7 +18,7 @@ def get_jobs(broker_id, biztalk_id):
 @allure.title("Тест получения работ пользователя: brokerId = {broker_id}, biztalkId = {biztalk_id}")
 @allure.description("Проверка получения работ с различными brokerId и biztalkId")
 @pytest.mark.parametrize("broker_id, biztalk_id, expected_success, expected_status", [
-    (INVALID_BROKER_ID, VALID_BIZTALK_ID_BANNERS, True, StatusCode.OK.value),
+    (VALID_BROKER_ID_BANNERS, VALID_BIZTALK_ID_BANNERS, True, StatusCode.OK.value),
 ])
 def test_get_jobs(broker_id, biztalk_id, expected_success, expected_status):
 

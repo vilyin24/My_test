@@ -7,3 +7,4 @@ class Config:
 
     BASE_URL_BANNERS = 'https://credits-applicationsservice-abo.dev.akbars.ru/banners'
 
+    BASE_URL_BROKER = 'https://credits-applicationsservice-abo.dev.akbars.ru/creditapplication/broker'
